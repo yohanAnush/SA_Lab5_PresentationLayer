@@ -8,9 +8,8 @@
 </head>
 <body>
 	<div>
-		<ul style="list-style-type: none;">
+		<ul style="decoration: none;">
 			<li> Username: <input type="text"/> </li>
-			<li></li>
 			<li> Password: <input type="password"/> </li>
 			<li> <input type="checkbox"/> Remember Credentials. </li>
 			<li> <button type="submit">Login</button> </li>
