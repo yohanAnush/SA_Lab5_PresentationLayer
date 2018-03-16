@@ -1,0 +1,11 @@
+package com.sliit.sa.lab5.helpers;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateTimeHelper {
+	public String getDateTimeAsString() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd MM:mm:ss");
+		return dateFormat.format(new Date());
+	}
+}

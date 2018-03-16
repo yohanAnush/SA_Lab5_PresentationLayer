@@ -1,0 +1,5 @@
+package com.sliit.sa.lab5.entities;
+
+public class Authenticator implements IAuthenticator {
+	private 
+}
