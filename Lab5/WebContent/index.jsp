@@ -7,14 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
+	<form action="" method="post">
 		<ul style="list-style-type: none;">
 			<li> Username: <input type="text"/> </li>
 			<li></li>
 			<li> Password: <input type="password"/> </li>
 			<li> <input type="checkbox"/> Remember Credentials. </li>
-			<li> <button type="submit">Login</button> </li>
+			<li> <button type="submit" class="btn btn-default">Login</button> </li>
 		</ul>
-	</div>
+	</form>
 </body>
 </html>
