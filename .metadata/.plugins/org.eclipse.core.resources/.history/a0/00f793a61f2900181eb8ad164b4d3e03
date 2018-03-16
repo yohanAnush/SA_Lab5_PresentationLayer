@@ -16,8 +16,7 @@
 		// get current user.
 		User user = (User) request.getAttribute("user");
 	%>
-	
 	<h6> <i> <%= date %> </i> </h6>
-	<h4>Welcome <%= user.getUsername() %> </h4>
+	<h4>Welcome </h4>
 </body>
 </html>

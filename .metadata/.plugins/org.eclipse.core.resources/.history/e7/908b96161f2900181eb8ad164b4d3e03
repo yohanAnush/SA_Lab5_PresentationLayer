@@ -11,10 +11,7 @@ public class Authenticator implements IAuthenticator {
 		return authenticatorInstance;
 	}
 	
-	public boolean authenticate(User user) {
-		return user.getUsername() != null && 
-				user.getPassword()!= null &&
-				user.getUsername().equals(user.getPassword());
-				
+	public boolean authenticate(String name, String password) {
+		return name != null && password != null && name.equals(password);
 	}
 }

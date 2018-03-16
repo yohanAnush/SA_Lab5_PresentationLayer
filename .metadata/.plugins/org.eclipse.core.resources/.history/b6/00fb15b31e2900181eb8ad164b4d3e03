@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sliit.sa.lab5.entities.Authenticator;
-import com.sliit.sa.lab5.entities.User;
 
 /**
  * Servlet implementation class Controller
@@ -42,19 +41,15 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		Authenticator authenticator = new Authenticator();
-		User user = new User();
 		RequestDispatcher dispatcher;
 		
-		user.setUsername(username);
-		user.setPassword(password);
-		
 		// validate the login credentials.
+		Authenticator authenticator = new Authenticator();
+		
 		// redirect if info is correct.
-		if (authenticator.authenticate(user)) {
+		if (authenticator.authenticate(username, password)) {
 			System.out.println("Login successfull; redirecting to home page.");
 			
-			request.setAttribute("user", user);	// embed user object.
 			dispatcher = request.getRequestDispatcher("/home.jsp");
 			dispatcher.forward(request, response);
 			

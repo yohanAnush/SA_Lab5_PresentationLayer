@@ -1,4 +1,5 @@
 <%@page import="com.sliit.sa.lab5.helpers.DateTimeHelper"%>
+<%@page import="com.sliit.sa.lab5.entities.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,9 +10,14 @@
 </head>
 <body >
 	<% 
+		// get current date.
 		String date = new DateTimeHelper().getDateTimeAsString();
+	
+		// get current user.
+		User user = (User) request.getAttribute("user");
 	%>
+	
 	<h6> <i> <%= date %> </i> </h6>
-	<h4>Welcome </h4>
+	<h4>Welcome <%= user.getUsername() %> </h4>
 </body>
 </html>

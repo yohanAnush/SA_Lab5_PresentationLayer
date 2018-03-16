@@ -54,7 +54,6 @@ public class LoginController extends HttpServlet {
 		if (authenticator.authenticate(user)) {
 			System.out.println("Login successfull; redirecting to home page.");
 			
-			request.setAttribute("user", user);	// embed user object.
 			dispatcher = request.getRequestDispatcher("/home.jsp");
 			dispatcher.forward(request, response);
 			
